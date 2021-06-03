@@ -8,6 +8,10 @@ class AppThemeToggle extends React.Component {
         super(props)
 
         this.state = { theme: 'light' };
+
+        this.toggle = this.toggle.bind(this)
+        
+        console.log('CONSTRUCTOR')
     }
 
     toggle() {
@@ -19,21 +23,25 @@ class AppThemeToggle extends React.Component {
     }
 
     render() {
+        console.log('RENDER')
         return (
             <div
                 className={`appThemeToggle d-flex align-items-center justify-content-center ${this.state.theme}`}
                 // className={`${styles.appThemeToggle} d-flex align-items-center justify-content-center ${this.state.theme}`}
-                onClick={this.toggle.bind(this)}
+                onClick={this.toggle}
+                
             />
         )
     }
 
     componentDidMount() {
+        console.log('DID MOUNT')
         document.body.setAttribute('theme', this.state.theme);
     }
 
 
     componentDidUpdate() {
+        console.log('DID UPDATE')
         document.body.setAttribute('theme', this.state.theme);
     }
 }

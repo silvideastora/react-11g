@@ -5,6 +5,7 @@ import Header from './components/Header';
 import SideNavLeft from './components/SideNavLeft';
 import SideNavRight from './components/SideNavRight';
 import Posts from './components/Posts';
+import Counter from './components/Counter';
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
 
             <main className="col-8">
               <Posts />
+              <Counter />
             </main>
 
             <SideNavRight />
