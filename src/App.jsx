@@ -1,32 +1,28 @@
 import React from "react";
 
-import AppLoading from "./components/AppLoading";
-import Header from "./components/Header";
-import SideNavLeft from "./components/SideNavLeft";
-import SideNavRight from "./components/SideNavRight";
-import Posts from "./components/Posts";
-import Counter from "./components/Counter";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Screens
+import Home from "./screens/Home";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="app">
-        <Header />
-        <div className="container">
-          <div className="row">
-            <SideNavLeft />
-
-            <main className="col-8">
-              <Posts />
-              <Counter />
-            </main>
-
-            <SideNavRight />
-          </div>
+      <Router>
+        <div className="app">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/holi">
+              <h1>Holi</h1>
+            </Route>
+            <Route exact path="/adios">
+              <h1>Adios</h1>
+            </Route>
+          </Switch>
         </div>
-        <AppLoading />
-        ∏∏
-      </div>
+      </Router>
     );
   }
 }
