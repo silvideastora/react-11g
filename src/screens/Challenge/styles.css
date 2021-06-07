@@ -1,0 +1,12 @@
+.active {
+    color: magenta;
+    font-weight: bold;
+    font: 100;
+    
+}
+
+.active-button {
+    color: cyan;
+    box-sizing: border-box;
+    
+}
