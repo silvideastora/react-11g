@@ -11,8 +11,8 @@ export default function Challenge() {
     <ul>
       {menu.map((item, index) => (
         <li
-          className={`btn ${activeItem === index + 1 ? "active" : null}`}
-          onClick={() => setActiveItem(index + 1)}
+          className={`btn ${activeItem === index ? "active" : null}`}
+          onClick={() => setActiveItem(index)}
         >
           {item}
         </li>
